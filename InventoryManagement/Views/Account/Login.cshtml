@@ -1,0 +1,39 @@
+﻿@{
+ViewData["Title"] = "Login";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="height:80vh;">
+    <div class="card shadow-lg p-4" style="width:350px; border-radius:12px;">
+
+    <h3 class="text-center mb-4">Inventory Login</h3>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input name="username" class="form-control" placeholder="Enter username" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter password" />
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+                Login
+            </button>
+        </div>
+
+    </form>
+
+    @if(ViewBag.Error != null)
+    {
+        <div class="alert alert-danger mt-3 text-center">
+            @ViewBag.Error
+        </div>
+    }
+
+</div>
+
+</div>
